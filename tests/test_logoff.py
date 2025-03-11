@@ -21,4 +21,3 @@ class TestStellarBurgersLogoff:
         driver.find_element(By.XPATH, "//button[@class ='Account_button__14Yp3 text text_type_main-medium text_color_inactive']").click()
         driver.implicitly_wait(5)
         assert driver.find_element(By.XPATH, "//main").is_displayed()
-        driver.quit()

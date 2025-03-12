@@ -12,4 +12,4 @@ class TestStellarBurgersConstructor:
     def test_constructor(self, driver, div):
         driver.get(f"{Config.URL}login")
         driver.find_element(By.XPATH, div).click()
-        assert driver.find_element(By.XPATH, "//h1").text == 'Соберите бургер'
+        assert driver.find_element(*StellarBurgersLocators.TITLE_TEXT).text == 'Соберите бургер'

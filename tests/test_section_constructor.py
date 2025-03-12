@@ -12,4 +12,4 @@ class TestStellarBurgersConstructors:
     def test_transitions_to_sections(self, driver, text):
         driver.get(Config.URL)
         driver.find_element(By.XPATH, f".//span[text()='{text}']/parent::div").click()
-        assert driver.find_element(By.XPATH, "//div[contains(@class, 'tab_tab_type_current__2BEPc')]/span").text == text
+        assert driver.find_element(*StellarBurgersLocators.ACTIVE_COLUMN_MENU).text == text
